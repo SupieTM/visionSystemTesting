@@ -1,9 +1,7 @@
 import cv2 as cv
 import numpy as np
-import time
 
 testImageURL = "./testImg.png"
-
 
 def main():
     #read the testimg
@@ -27,6 +25,7 @@ def main():
 
     con2 = []
 
+    #remove small contours
     for con in contours:
         x, y, w, h = cv.boundingRect(con)
         if ((w * h) > 5000):
@@ -46,3 +45,6 @@ def main():
 
 
 main()
+
+#NOTES
+# This can create contours around the casting useing its HSV values. However, some areas of their enviroment also falll under the color ranger. It leads to bounding boxes bigger than intended. 

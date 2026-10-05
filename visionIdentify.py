@@ -48,3 +48,4 @@ main()
 
 #NOTES
 # This can create contours around the casting useing its HSV values. However, some areas of their enviroment also falll under the color ranger. It leads to bounding boxes bigger than intended. 
+# I will need additional data to procced with making the boxes more accurate.
